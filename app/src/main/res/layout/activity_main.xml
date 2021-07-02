@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnTakePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/take_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSavePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/save_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnTakePicture"/>
+
+    <ImageView
+        android:id="@+id/imgPicture"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="@string/image"
+        android:layout_margin="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSavePicture"/>
+
+    <SeekBar
+        android:id="@+id/seekRed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:max="100"
+        android:paddingTop="@dimen/padding"
+        android:progress="0"
+        android:thumbTint="@color/red"
+        app:layout_constraintEnd_toStartOf="@id/txtRedValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgPicture" />
+
+    <TextView
+        android:id="@+id/txtRedValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:paddingTop="4dp"
+        android:text="@string/red_value"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/seekRed"
+        app:layout_constraintTop_toBottomOf="@id/imgPicture" />
+
+    <SeekBar
+        android:id="@+id/seekGreen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:max="100"
+        android:paddingTop="@dimen/padding"
+        android:progress="0"
+        android:thumbTint="@color/green"
+        app:layout_constraintEnd_toStartOf="@id/txtGreenValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekRed" />
+
+    <TextView
+        android:id="@+id/txtGreenValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:paddingTop="4dp"
+        android:text="@string/green_value"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/seekGreen"
+        app:layout_constraintTop_toBottomOf="@id/txtRedValue" />
+
+    <SeekBar
+        android:id="@+id/seekBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:max="100"
+        android:paddingTop="@dimen/padding"
+        android:progress="0"
+        android:thumbTint="@color/blue"
+        app:layout_constraintEnd_toStartOf="@id/txtBlueValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekGreen" />
+
+    <TextView
+        android:id="@+id/txtBlueValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:paddingTop="4dp"
+        android:text="@string/blue_value"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/seekBlue"
+        app:layout_constraintTop_toBottomOf="@id/txtGreenValue"/>
+
+    <Button
+        android:id="@+id/btnSharePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/share_pic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBlue"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Color App</string>
+    <string name="take_pic">Take A Picture!</string>
+    <string name="save_pic">Save The Picture!</string>
+    <string name="image">Picture from camera app</string>
+    <string name="no_camera">Your device does not have a camera</string>
+    <string name="image_captured">Image captured!</string>
+    <string name="red_value">R Gradient</string>
+    <string name="green_value">G Gradient</string>
+    <string name="blue_value">B Gradient</string>
+    <string name="select_image">Please choose an image first!</string>
+    <string name="image_saved">Image saved successfully!</string>
+    <string name="share_pic">Share Picture!</string>
+</resources>
